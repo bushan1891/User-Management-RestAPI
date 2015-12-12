@@ -1,0 +1,25 @@
+package user.egen.rest.controller;
+
+import java.rmi.AccessException;
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/all")
+public class UserController {
+
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public List findRes() throws Exception{
+		
+	  System.out.println("i was called");
+		
+	  return null;
+	}
+	
+	
+}

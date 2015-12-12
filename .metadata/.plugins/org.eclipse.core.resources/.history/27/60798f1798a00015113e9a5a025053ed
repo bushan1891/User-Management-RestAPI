@@ -1,0 +1,5 @@
+package user.egen.rest.controller;
+
+public class UserController {
+
+}
