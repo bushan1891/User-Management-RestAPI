@@ -1,0 +1,2 @@
+127.0.0.1 - - [12/Dec/2015:11:21:42 -0800] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [12/Dec/2015:11:21:43 -0800] "GET /UserRestAPP/WEB-INF/classes/user/egen/rest/controller/UserController.java HTTP/1.1" 404 992
