@@ -30,81 +30,67 @@ import javax.ws.rs.core.MediaType;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponses;
 import user.egen.DAO.userDAO;
+import user.egen.exception.AppException;
 import user.egen.model.User;
 
 @Path("/user")
-@Api(tags= {"user"})
-public class UserController {	
-	
+@Api(tags = { "user" })
+public class UserController {
+
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	
-	@ApiOperation (value="Find All",
-	notes = "finds all the user")
-    
-	@ApiResponses(value = {
-	@ApiResponse (code=200, message="Success"),
-	@ApiResponse (code=500, message="Internal Server Error")
-    })
-	
-	public List findUser() throws Exception{
-		
+
+	@ApiOperation(value = "Find All", notes = "finds all the user")
+    @ApiResponses(value = { @ApiResponse(code = 200, message = "Success"),
+			@ApiResponse(code = 500, message = "Internal Server Error") })
+
+	public List findUser() throws AppException {
+
 		userDAO dao = new userDAO();
 		return dao.fetchAll();
 	}
-	
+
 	@GET
 	@Path("/{user}")
 	@Produces(MediaType.APPLICATION_JSON)
-	
-	@ApiOperation (value="Find one",
-	notes = "Find User")
-    
-	@ApiResponses(value = {
-	@ApiResponse (code=200, message="Success"),
-	@ApiResponse (code=500, message="Internal Server Error")
-    })
-	
-	public User findOne(@PathParam("user") int userID){
-         	 
+
+	@ApiOperation(value = "Find one", notes = "Find User")
+
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "Success"),
+			@ApiResponse(code = 500, message = "Internal Server Error") })
+
+	public User findOne(@PathParam("user") int userID) throws AppException {
+
 		userDAO dao = new userDAO();
- 	        
-		return dao.fetchOne(userID) ;
+
+		return dao.fetchOne(userID);
 	}
-	
+
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	@ApiOperation (value="Create",
-		notes = "Create new User")
-	@ApiResponses(value = {
-		@ApiResponse (code=200, message="Success"),
-		@ApiResponse (code=500, message="Internal Server Error")
-	})
-	public User makeRes(User user) throws Exception{
-		
+	@ApiOperation(value = "Create", notes = "Create new User")
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "Success"),
+			@ApiResponse(code = 500, message = "Internal Server Error") })
+	public User makeRes(User user) throws Exception {
+
 		userDAO dao = new userDAO();
 		return dao.create(user);
-		
-		
+
 	}
-	
+
 	@PUT
 	@Path("/{USER_ID}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	@ApiOperation (value="Update",
-		notes = "Update User Record")
-	@ApiResponses(value = {
-		@ApiResponse (code=200, message="Success"),
-		@ApiResponse (code=500, message="Internal Server Error")
-	})
-	public User update(@PathParam("USER_ID") int USER_ID, User user) throws Exception{
-		
+	@ApiOperation(value = "Update", notes = "Update User Record")
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "Success"),
+			@ApiResponse(code = 500, message = "Internal Server Error") })
+	public User update(@PathParam("USER_ID") int USER_ID, User user) throws Exception {
+
 		userDAO dao = new userDAO();
-       
-		return dao.update(USER_ID,user);
+
+		return dao.update(USER_ID, user);
 	}
-	
-	
+
 }
