@@ -2,7 +2,6 @@ package user.egen.rest.controller;
 
 import java.rmi.AccessException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -32,8 +31,7 @@ import io.swagger.annotations.ApiResponses;
 import user.egen.DAO.userDAO;
 import user.egen.model.User;
 
-@Path("/user")
-@Api(tags= {"user"})
+@Path("/all")
 public class UserController {	
 	
 	@GET

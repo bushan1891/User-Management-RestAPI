@@ -7,7 +7,7 @@ public class User {
 	private String MiddleName;
 	private String LastName;
 	private int age;
-	public enum Gender {
+	private enum Gender {
 	    MALE,
 	    FEMALE,
 	}

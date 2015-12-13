@@ -21,7 +21,7 @@ public class RestApp extends ResourceConfig {
 		
 		BeanConfig config = new BeanConfig();
 		config.setBasePath("/UserRestAPP/api");
-		config.setDescription("User API");
+		config.setDescription("User API ");
 		config.setVersion("1.0");
 		config.setSchemes(new String [] {"http"});
 		config.setResourcePackage("user.egen");
