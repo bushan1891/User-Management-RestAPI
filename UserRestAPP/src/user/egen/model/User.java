@@ -9,7 +9,7 @@ public class User {
 	private int age;
 	public enum Gender {
 	    MALE,
-	    FEMALE,
+	    FEMALE
 	}
 	private Gender gender;  // takes values either male or female  
 	private String phone;

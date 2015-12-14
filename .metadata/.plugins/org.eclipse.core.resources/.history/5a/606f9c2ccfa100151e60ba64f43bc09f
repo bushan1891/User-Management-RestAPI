@@ -1,0 +1,35 @@
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import user.egen.DAO.userDAO;
+import user.egen.exception.AppException;
+import user.egen.model.User;
+
+public class TestUserDAO {
+
+	private userDAO dao;
+	private List<User> userList;
+	@Before
+	public void setUp() throws Exception {
+		dao = new userDAO();
+		userList = new ArrayList<User>();
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		
+	}
+
+	@Test
+	public void testFetchAll() throws AppException {
+		userList = dao.fetchAll();
+		assertEquals(userList.get(0).getFirstName(),"Bushan");
+	}
+
+}

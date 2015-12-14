@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestUserDAO" project="UserRestAPP" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="TestUserDAO" time="0.402">
+    <testcase name="testFetchAll" classname="TestUserDAO" time="0.392"/>
+    <testcase name="testFetchOne" classname="TestUserDAO" time="0.01"/>
+  </testsuite>
+</testrun>

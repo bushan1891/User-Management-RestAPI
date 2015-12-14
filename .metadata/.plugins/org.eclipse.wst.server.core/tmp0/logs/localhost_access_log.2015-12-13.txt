@@ -38,3 +38,15 @@
 0:0:0:0:0:0:0:1 - - [13/Dec/2015:10:28:25 -0800] "GET /UserRestAPP/api/user HTTP/1.1" 200 525
 127.0.0.1 - - [13/Dec/2015:10:30:12 -0800] "GET / HTTP/1.1" 404 994
 0:0:0:0:0:0:0:1 - - [13/Dec/2015:10:30:25 -0800] "GET /UserRestAPP/api/user HTTP/1.1" 200 519
+0:0:0:0:0:0:0:1 - - [13/Dec/2015:11:34:30 -0800] "GET /UserRestAPP/api/user/1001 HTTP/1.1" 200 130
+0:0:0:0:0:0:0:1 - - [13/Dec/2015:11:34:34 -0800] "GET /UserRestAPP/api/user/ HTTP/1.1" 200 519
+0:0:0:0:0:0:0:1 - - [13/Dec/2015:11:37:28 -0800] "GET /UserRestAPP/api/swagger.json HTTP/1.1" 200 1915
+0:0:0:0:0:0:0:1 - - [13/Dec/2015:11:37:42 -0800] "GET /UserRestAPP/api/user HTTP/1.1" 200 519
+0:0:0:0:0:0:0:1 - - [13/Dec/2015:11:38:37 -0800] "OPTIONS /UserRestAPP/api/user HTTP/1.1" 200 1779
+0:0:0:0:0:0:0:1 - - [13/Dec/2015:11:38:37 -0800] "POST /UserRestAPP/api/user HTTP/1.1" 200 124
+0:0:0:0:0:0:0:1 - - [13/Dec/2015:11:38:49 -0800] "GET /UserRestAPP/api/user HTTP/1.1" 200 644
+0:0:0:0:0:0:0:1 - - [13/Dec/2015:17:24:41 -0800] "GET /UserRestAPP/api/user/ HTTP/1.1" 200 644
+0:0:0:0:0:0:0:1 - - [13/Dec/2015:17:24:52 -0800] "GET /UserRestAPP/api/user/ HTTP/1.1" 200 644
+127.0.0.1 - - [13/Dec/2015:17:25:22 -0800] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [13/Dec/2015:17:25:26 -0800] "GET /UserRestAPP/api/user/ HTTP/1.1" 200 644
+0:0:0:0:0:0:0:1 - - [13/Dec/2015:17:25:29 -0800] "GET /UserRestAPP/api/user/ HTTP/1.1" 200 644

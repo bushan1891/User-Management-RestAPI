@@ -14,7 +14,7 @@ import user.egen.util.DButil;
 
 public class userDAO {
 
-	public List fetchAll() throws AppException {
+	public List<User> fetchAll() throws AppException {
 
 		List<User> UserList = new ArrayList<User>();
 		Connection con = DButil.getConnection();

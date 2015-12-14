@@ -1,8 +1,5 @@
 package user.egen.RestApp;
 
-import static spark.Spark.get;
-import static spark.Spark.post;
-
 import javax.ws.rs.ApplicationPath;
 import org.glassfish.jersey.server.ResourceConfig;
 import io.swagger.jaxrs.config.BeanConfig;

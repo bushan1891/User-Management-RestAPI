@@ -1,18 +1,10 @@
 package user.egen.rest.controller;
 
-import java.rmi.AccessException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
-import java.util.List;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -21,14 +13,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponses;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponses;
 import user.egen.DAO.userDAO;
 import user.egen.exception.AppException;
 import user.egen.model.User;
@@ -41,10 +25,10 @@ public class UserController {
 	@Produces(MediaType.APPLICATION_JSON)
 
 	@ApiOperation(value = "Find All", notes = "finds all the user")
-    @ApiResponses(value = { @ApiResponse(code = 200, message = "Success"),
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "Success"),
 			@ApiResponse(code = 500, message = "Internal Server Error") })
 
-	public List findUser() throws AppException {
+	public List<User> findUser() throws AppException {
 
 		userDAO dao = new userDAO();
 		return dao.fetchAll();
